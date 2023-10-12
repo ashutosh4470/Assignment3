@@ -12,15 +12,18 @@ public class A1
         System.out.println();
         double balance = sc.nextDouble();
         double amount;
-        // hfhfh
 
         // BankAccount bk = new BankAccount(acno,balance);
         CheckingAccount cA = new CheckingAccount(acno, balance);
+        SavingAccount sA = new SavingAccount(acno, balance);
         cA.deposit(sc);
         cA.getBalance();
+
         amount = cA.withdraw(sc);
         cA.deductFee(amount);
         cA.getBalance();
 
+        sA.addInterest(sc);
+        sA.getBalance();
         }
-}~
+}
