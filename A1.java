@@ -12,6 +12,7 @@ public class A1
         System.out.println();
         double balance = sc.nextDouble();
         double amount;
+        // hfhfh
 
         // BankAccount bk = new BankAccount(acno,balance);
         CheckingAccount cA = new CheckingAccount(acno, balance);
