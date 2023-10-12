@@ -9,6 +9,7 @@ public class A1
         int acno = sc.nextInt();
 
         System.out.print("Enter Balance :");
+        System.out.println();
         double balance = sc.nextDouble();
         double amount;
 
@@ -21,4 +22,4 @@ public class A1
         cA.getBalance();
 
         }
-}
+}~
