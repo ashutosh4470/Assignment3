@@ -34,6 +34,20 @@ public class ShoppingCart {
         }
     }
 
+    public void checkout() {
+        if (cart.isEmpty()) {
+            System.out.println("Cart is empty. Nothing to checkout.");
+        } else {
+            System.out.println("Checking out items:");
+            for (String item : cart) {
+                System.out.println(item);
+            }
+            System.out.println("Total items: " + cart.size());
+            System.out.println("Checkout completed. Thank you for shopping!");
+            emptyCart(); // Empty the cart after successful checkout
+        }
+    }
+
     public static void main(String[] args) {
         ArrayList<String> cart = new ArrayList<>();
         cart.add("Bag");
@@ -49,7 +63,7 @@ public class ShoppingCart {
         do {
             System.out.println("---------------------------------");
             System.out.println(
-                    "Enter Your choice :\n1.viewShopsItems\n2.addItem\n3.removeItem\n4.viewItems\n5.emptyCart\n0.exit");
+                    "Enter Your choice :\n1.viewShopsItems\n2.addItem\n3.removeItem\n4.viewItems\n5.emptyCart\n6.Checkout\n0.exit");
             choice = sc.nextInt();
 
             switch (choice) {
@@ -79,6 +93,8 @@ public class ShoppingCart {
                     sCart.emptyCart();
                     break;
 
+                case 6: sCart.checkout();
+                    break;
                 case 0:
                     break;
 
